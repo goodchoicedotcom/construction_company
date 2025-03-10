@@ -1,0 +1,50 @@
+/*******************************************************/
+/******************* ## History Area ********************/
+/*******************************************************/
+.company-history-active
+    z-index: 1
+    +gapLR(margin, -50px)
+    .company-history-item
+        +gapLR(margin, 50px)
+    &:before
+        content: ''
+        z-index: -1
+        +poLT(0, 46%)
+        +size(100%, 1px)
+        background: $border-color
+        +res-bl(md)
+            display: none
+        
+.company-history-item
+    margin-bottom: 50px
+    .content
+        background: white
+        padding: 35px 45px 10px
+        +res-bl(xs)
+            +gapLR(padding, 25px)
+        .icon
+            font-size: 14px
+            padding-top: 2px
+            margin-bottom: 18px
+            color: $heading-color
+            +circle($primary-color, 25px)
+        h6
+            margin-bottom: 12px
+            +res-ab(xs)
+                font-size: 20px
+        p
+            line-height: 1.6
+    .year
+        font-size: 24px
+        transition: 0.5s
+        @extend %heading
+        +gapTB(margin, 40px)
+        +circle(white, 100px)
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1)
+    .image
+        +res-ab(md)
+            &:first-child
+                margin-top: 85px
+    &:hover
+        .year
+            background: $primary-color

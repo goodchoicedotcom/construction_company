@@ -1,0 +1,106 @@
+/*******************************************************/
+/****************** ## Counter Area  *******************/
+/*******************************************************/
+.counter-wrap
+    display: flex
+    flex-wrap: wrap
+    padding: 80px 65px 45px
+    transform: translateY(70px)
+    justify-content: space-between
+    +res-bl(md)
+        padding: 50px 35px 15px
+    +res-bl(sm)
+        +gapLR(padding, 15px)
+    .counter-item
+        +gapLR(padding, 15px)
+        +res-bt(xs, sm)
+            max-width: 50%
+
+.counter-item
+    margin-bottom: 30px
+    .icon
+        +size(20px)
+        margin-bottom: 26px
+        background: $heading-color
+        clip-path: polygon(0 0, 0 100%, 100% 100%)
+    .count-text
+        @extend %h2
+        display: block
+        margin-bottom: 8px
+        +res-bl(sm)
+            font-size: 35px
+    .counter-title
+        margin-bottom: 0
+        +res-bl(sm)
+            font-size: 16px
+            
+    &.style-two
+        margin-top: 30px
+        background: white
+        padding: 0 40px 33px
+        .icon
+            +size(90px)
+            color: white
+            font-size: 50px
+            clip-path: none
+            margin-bottom: 0
+            line-height: 90px
+            text-align: center
+            background: $primary-color
+            transform: translateY(-30px)
+        .counter-title
+            font-weight: 500
+            color: $base-color
+            font-family: $base-font
+            
+.count-text
+    &.plus
+        &:after
+            content: '+'
+    &.k-plus
+        &:after
+            content: 'k+'
+    &.percent
+        &:after
+            content: '%'
+        
+/* Counter Two */
+.counter-item-two
+    display: flex
+    margin-bottom: 30px
+    .count-text
+        line-height: 1
+        font-size: 75px
+        font-weight: 600
+        margin-right: 30px
+        color: $heading-color
+        +res-bl(xs)
+            font-size: 55px
+    .counter-title
+        font-weight: 500
+        color: $base-color
+        +res-ab(xs)
+            font-size: 22px
+        
+/* Progress Counter */
+.progress-contentt.style-two
+    display: flex
+    background: white
+    margin-bottom: 30px
+    padding: 40px 50px
+    position: relative
+    flex-direction: column
+    align-items: self-start
+    +res-bl(sm)
+        margin-top: 0
+    h6
+        margin-bottom: 20px
+    canvas
+        order: 2
+    .counting
+        font-size: 24px
+        @extend %heading
+        +poLB(100px, 88px)
+        transform: translate(-50%, 50%)
+    &.white
+        background: $primary-color

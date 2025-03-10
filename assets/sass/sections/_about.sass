@@ -1,0 +1,130 @@
+/*******************************************************/
+/******************* ## About Area ********************/
+/*******************************************************/
+.about-image
+    z-index: 1
+    max-width: 630px
+    padding-right: 7%
+    position: relative
+    padding-bottom: 20%
+    &:before
+        +poLB(0)
+        content: ''
+        +size(340px)
+        z-index: -1
+        border-radius: 50%
+        transform: translate(-40%)
+        border: 65px solid $lighter-color
+        +res-bl(ms)
+            +size(200px)
+            border-width: 35px
+    img
+        width: 100%
+    .circle-progress-wrap
+        +poRB(0)
+        max-width: 222px
+        background: white
+        padding: 30px 45px 35px
+        border: 5px solid $primary-color
+        box-shadow: (0px 4px 60px rgba(0, 0, 0, 0.07))
+        +res-bl(xs)
+            max-width: 200px
+            padding: 15px 25px 20px
+        .progress-content
+            display: flex
+            position: relative
+            flex-direction: column
+            align-items: self-start
+            h6
+                margin-bottom: 20px
+            canvas
+                order: 2
+            .counting
+                +poLB(50px)
+                font-size: 24px
+                @extend %heading
+                transform: translate(-50%, 50%)
+    &.style-two
+        &:before
+            display: none
+        +res-ab(ms)
+            padding-right: 0
+            padding-bottom: 0
+            
+    &.style-three
+        &:before
+            display: none
+        +res-ab(ms)
+            padding-right: 0
+            padding-bottom: 0
+        .circle-progress-wrap
+            left: 0
+                
+.about-content
+    .video-play-text
+        span
+            +res-bl(ms)
+                display: none
+            
+/* Achievement Area */
+.achievement-left-content
+    p
+        font-weight: 500
+        a
+            color: $primary-color
+            text-decoration: underline
+            
+.achievement-right-part
+    .counter-item
+        .icon
+            background: $primary-color
+        .counter-title
+            color: $base-color
+            
+/* Why Choose */
+.why-choose-video
+    .image
+        padding-top: 40px
+        padding-right: 40px
+        position: relative
+        +res-ab(xl)
+            margin-right: 55px
+        .video-play
+            +poRT(0)
+            +size(80px)
+            font-size: 14px
+            line-height: 70px
+            color: $heading-color
+            border: 7.5px solid white
+            background: $primary-color
+            
+/* About Three */
+.about-content-three
+    .section-title
+        h2
+            +res-bt(lg, xl)
+                font-size: 44px
+                
+/* Who We Are Content */
+.who-we-are-content
+    max-width: 500px
+    .service-item-three.style-two
+        margin-bottom: 0
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 20px
+        &:nth-child(even)
+            +res-ab(ms)
+                margin-right: 30px
+        &:nth-child(odd)
+            margin-left: 30px
+        .icon
+            font-size: 50px
+            margin-bottom: 0
+            margin-right: 25px
+        h5
+            margin-bottom: 3px
+            +res-ab(sm)
+                font-size: 24px
+            +res-bl(ms)
+                font-size: 20px

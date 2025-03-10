@@ -1,0 +1,25 @@
+/*******************************************************/
+/****************** ## Skillbar Area *******************/
+/*******************************************************/
+.skillbar
+    height: 10px
+    margin-top: 45px
+    position: relative
+    margin-bottom: 30px
+    background: #FFE9D4
+    .skillbar-title,
+    .skill-bar-percent
+        top: -46px
+        font-size: 18px
+        font-weight: 600
+        position: absolute
+        @extend %heading
+    .skill-bar-percent
+        right: 0
+    .skillbar-bar
+        width: 0
+        height: 100%
+        background-image: none
+        overflow: inherit !important
+        background-color: $primary-color
+        

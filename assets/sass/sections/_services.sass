@@ -1,0 +1,328 @@
+/*******************************************************/
+/****************** ## Services Area *******************/
+/*******************************************************/
+.bgc-lighter
+    .service-item
+        background: white
+
+.service-item
+    transition: 0.5s
+    padding: 38px 55px
+    margin-bottom: 30px
+    background: $lighter-color
+    border-top: 5px solid $lighter-color
+    +res-bl(xxl)
+        +gapLR(padding, 35px)
+    .icon
+        line-height: 1
+        font-size: 55px
+        margin-bottom: 15px
+        color: $primary-color
+    h5
+        margin-bottom: 12px
+    p
+        margin-bottom: 10px
+    &:hover
+        background: white
+        border-color: $primary-color
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.07)
+    
+    &.style-two
+        padding: 40px
+        border-top: none
+        background: white
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.02)
+        +res-bl(xs)
+            +gapLR(padding, 30px)
+        .icon
+            +size(80px)
+            font-size: 50px
+            transition: 0.5s
+            line-height: 80px
+            text-align: center
+            margin-bottom: 30px
+            background: rgba($primary-rgb, 0.1)
+        h5
+            font-size: 20px
+        p
+            transition: 0.5s
+        .read-more
+            width: 100%
+            margin-top: 18px
+            padding: 7px 15px
+            color: $heading-color
+            justify-content: center
+            background: rgba($primary-rgb, 0.1)
+        &:hover
+            background: $primary-color
+            .icon
+                background: white
+            p
+                color: $heading-color
+            .read-more
+                color: white
+                background: $heading-color
+                
+    &.style-three
+        border-top: none
+        background: white
+        margin-bottom: 80px
+        position: relative
+        padding: 30px 40px 20px
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.07)
+        +res-bl(xs)
+            +gapLR(padding, 30px)
+        .icon
+            +size(80px)
+            font-size: 45px
+            transition: 0.5s
+            line-height: 80px
+            text-align: center
+            +poRT(30px, -30px)
+            background: $lighter-color
+        .number
+            transition: 0.5s
+            margin-bottom: 4px
+            display: inline-block
+        h5
+            font-size: 20px
+        p
+            transition: 0.5s
+        .read-more
+            opacity: 0
+            z-index: -1
+            width: 100%
+            +poLT(0, 95%)
+            padding: 7px 15px
+            color: $heading-color
+            justify-content: center
+            background: $primary-color
+        &:hover
+            z-index: 2
+            background: $heading-color
+            .icon
+                color: $heading-color
+                background: $primary-color
+            .number, h5 a, p
+                color: white
+            .read-more
+                top: 100%
+                opacity: 1
+    
+.service-item-two
+    margin-bottom: 30px
+    .icon
+        line-height: 1
+        font-size: 50px
+        margin-bottom: 11px
+        color: $primary-color
+    h6
+        margin-bottom: 15px
+        +res-ab(xs)
+            font-size: 20px
+    &.style-two
+        z-index: 1
+        max-width: 305px
+        position: relative
+        .number
+            opacity: 0
+            z-index: -1
+            line-height: 1
+            transition: 0.5s
+            font-size: 150px
+            font-weight: 700
+            +poRT(75px, -15px)
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0) 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+        .icon
+            font-size: 60px
+            margin-bottom: 20px
+        h5
+            margin-bottom: 15px
+        .theme-btn
+            font-size: 14px
+            margin-top: 10px
+            padding: 7px 30px
+            background: white
+            color: $base-color
+        &:hover
+            .number
+                opacity: 1
+            .theme-btn
+                color: white
+                background: $primary-color
+
+.service-item-three
+    +res-ab(xs)
+        display: flex
+    &:not(:last-child)
+        margin-bottom: 28px
+    .icon
+        line-height: 1
+        font-size: 45px
+        color: $primary-color
+        margin: 8px 30px 20px 0
+    .content
+        h5
+            margin-bottom: 11px
+        p
+            margin-bottom: 0
+    &.style-two
+        background: white
+        margin-bottom: 5px
+        padding: 20px 30px 20px
+        box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.07)
+            
+.service-item-four
+    padding: 10px
+    position: relative
+    background: white
+    margin-bottom: 30px
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.07)
+    +res-ab(sm)
+        display: flex
+        align-items: center
+    +res-bl(sm)
+        text-align: center
+        padding-bottom: 20px
+    .image
+        flex: none
+        max-width: 50%
+        margin-right: 40px
+        +res-bt(lg, xl)
+            margin-right: 20px
+        +res-bl(sm)
+            margin-right: 0
+            max-width: none
+            margin-bottom: 20px
+    .content
+        .icon
+            line-height: 1
+            font-size: 50px
+            margin-bottom: 10px
+            color: $primary-color
+        h5
+            font-size: 20px
+            margin-bottom: 5px
+            +res-bt(lg, xl)
+                font-size: 18px
+        p
+            margin-bottom: 5px
+        &:after
+            +poRT(10px)
+            content: ''
+            +size(30px)
+            background: $lighter-color
+            clip-path: polygon(0 0, 100% 0, 100% 100%)
+
+.why-choose-right
+    padding: 50px 60px 40px
+    background: $lighter-color
+    border: 1px solid rgba(31, 33, 44, 0.20)
+    +res-bt(lg, xl)
+        +gapLR(padding, 35px)
+    +res-bl(sm)
+        +gapLR(padding, 35px)
+    +res-bl(ms)
+        +gapLR(padding, 20px)
+            
+.progress-with-service
+    +res-ab(xs)
+        display: flex
+        align-items: center
+    &:not(:last-child)
+        padding-bottom: 28px
+        margin-bottom: 50px
+        border-bottom: 1px solid $border-color
+    .service-progress
+        margin-right: 40px
+        position: relative
+        +res-bt(lg, xl)
+            margin-right: 30px
+        +res-bl(sm)
+            margin-right: 20px
+        +res-bl(xs)
+            margin-bottom: 10px
+        .counting
+            font-size: 24px
+            @extend %heading
+            +poLT(23%, 29%)
+            +res-bl(xs)
+                left: 8%
+    .content
+        +res-ab(xs)
+            margin-top: -8px
+        h5
+            margin-bottom: 8px
+            +res-bl(ms)
+                font-size: 18px
+        p
+            margin-bottom: 0
+            
+/* Services Two */
+.services-bg
+    position: relative
+    +res-ab(xl)
+        margin-top: -55px
+    &:before
+        content: ''
+        z-index: -2
+        +absmiddle()
+        background: $lighter-color
+        +size(calc(100% + 210px), 100%)
+        
+/* Service Theree */
+.for-service-bg
+    z-index: 1
+    position: relative
+    &:before
+        content: ''
+        z-index: -1
+        +absmiddle()
+        background: $lighter-color
+        +size(calc(100% + 160px), 100%)
+        
+/* Services Details */
+.service-details-conntent
+    .title
+        +res-bl(md)
+            font-size: 30px
+        +res-bl(sm)
+            font-size: 25px
+
+.next-prev-services
+    flex-wrap: wrap
+    +flexcenter(space-between)
+        
+.np-service-item
+    display: flex
+    align-items: center
+    margin-bottom: 50px
+    +res-bl(xl)
+        width: 100%
+    &:last-child
+        justify-content: flex-end
+    .image
+        +res-bl(md)
+            flex: none
+            max-width: 33%
+        &:first-child
+            margin-right: 65px
+            +res-bl(ms)
+                margin-right: 25px
+    .content
+        h4
+            +res-bl(md)
+                font-size: 25px
+            +res-bl(xs)
+                font-size: 20px
+            a
+                @extend %underline
+        &:first-child
+            text-align: right
+            margin-right: 65px
+            +res-bl(ms)
+                margin-right: 25px

@@ -1,0 +1,133 @@
+/*******************************************************/
+/******************** ## FAQs Area ********************/
+/*******************************************************/
+.accordion-item
+    border: none
+    border-radius: 0
+    background: white
+    box-shadow: inset (0px 0px 40px rgba(125, 125, 125, 0.08))
+    &:first-of-type
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        .accordion-button
+            border-top-left-radius: 0
+            border-top-right-radius: 0
+    &:last-of-type
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+        .accordion-button
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+    &:not(:last-child)
+        margin-bottom: 15px
+    .accordion-button
+        border: none
+        font-size: 16px
+        font-weight: 500
+        box-shadow: none
+        padding: 0 0 0 30px
+        color: $heading-color
+        background: transparent
+        +res-bl(ms)
+            font-size: 14px
+            padding-left: 20px
+        &:after
+            flex: none
+            +size(60px)
+            content: "\f068"
+            line-height: 60px
+            text-align: center
+            color: $primary-color
+            background: transparent
+            font-family: "Font Awesome 5 Pro"
+        &.collapsed
+            background: $lighter-color
+            &:after
+                content: "\f067"
+                color: $heading-color
+                background: $primary-color
+    .accordion-body
+        padding: 20px 30px
+        border-top: 1px solid $border-color
+        +res-bl(ms)
+            +gapLR(padding, 20px)
+        p:last-child
+            margin-bottom: 0
+        
+.faq-image-part
+    z-index: 1
+    position: relative
+    .image
+        img
+            width: 100%
+        &.one
+            width: 55%
+        &.two
+            width: 30%
+            +poRT(9.5%, 13%)
+        &.three
+            width: 30%
+            +poLB(4%, 7%)
+        &.four
+            width: 55%
+            margin-top: -8%
+            margin-left: auto
+    .video-play
+        +poRT(60.5%, 59%)
+    &:after
+        content: ''
+        z-index: -1
+        +poRT(-6%, 4.5%)
+        +size(86%, 50%)
+        background: url(../images/faqs/bg-lines.png) no-repeat center/100% 100%
+    
+    
+/* Home Three */
+.faq-area-two
+    &:before
+        +poLB(0)
+        content: ''
+        z-index: -1
+        +size(100%, 118%)
+        background: $lighter-color
+    .accordion-item
+        background: white
+        .accordion-button
+            background: white
+
+.faq-image-two
+    position: relative
+    .video-play
+        +poLB(0)
+        background: white
+        
+/* FAQ Page */
+.faq-page-conntent
+    .accordion-item
+        box-shadow: none
+        .accordion-button
+            background: white
+            +res-ab(sm)
+                padding-left: 40px
+        .accordion-body
+            +res-ab(sm)
+                padding: 35px 40px
+        .content
+            h6
+                margin-bottom: 20px
+                +res-ab(xs)
+                    font-size: 20px
+            .list-style-three
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                li
+                    width: 50%
+                    margin-bottom: 0
+                    font-weight: 500
+                    color: $heading-color
+                    +res-bl(ms)
+                        width: 100%
+                    &:before
+                        font-size: 1em
+                        margin-right: 10px

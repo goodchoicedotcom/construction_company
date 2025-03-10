@@ -1,0 +1,154 @@
+/*******************************************************/
+/*******************  ## Team Area *******************/
+/*******************************************************/
+.team-area
+    background-color: #2A2C38
+
+.team-member
+    margin-bottom: 30px
+    .image
+        +overlay(rgb(42, 44, 56), 0)
+        z-index: 2
+        &::before
+            z-index: 1
+            mix-blend-mode: multiply
+            transition: 0.5s
+        img
+            width: 100%
+    .content
+        transition: 0.5s
+        max-width: 100%
+        margin-top: -40px
+        margin-left: auto
+        width: max-content
+        padding: 22px 40px 30px
+        +overlay(white, 1)
+        z-index: 2
+        &:before
+            transition: 0.5s
+            height: calc(100% - 55px)
+            box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1)
+        h6
+            font-size: 20px
+            margin-bottom: 3px
+        .designation
+            display: block
+            font-weight: 500
+            margin-bottom: 10px
+            transition: 0.5s
+        .social-style-two
+            opacity: 0
+            transition: 0.5s
+            visibility: hidden
+            a
+                color: $heading-color
+                border-color: black
+                line-height: 37px
+                &:hover
+                    color: white
+                    background: black
+    &:hover
+        .image::before
+            opacity: .7
+        .content
+            &:before
+                height: 100%
+                background: $primary-color
+            .designation
+                color: $heading-color
+            .social-style-two
+                opacity: 1
+                visibility: visible
+                transition-delay: 0.5s
+                
+                
+/* Team Style Two */
+.team-member-two
+    margin-bottom: 30px
+    .image
+        position: relative
+        margin-bottom: 20px
+        &:before
+            +poLT(0)
+            content: ''
+            +size(100%)
+            opacity: 0
+            transition: 0.5s
+            background: #1F212C
+        img
+            width: 100%
+        .social-style-one
+            z-index: 2
+            opacity: 0
+            margin-left: 0
+            max-width: 100%
+            +poLB(50%, 20px)
+            transition: 0.5s
+            width: max-content
+            padding: 4px 12px 2px
+            background: $primary-color
+            transform: translate(-50%)
+            a
+                margin: 0 10px
+                font-size: 14px
+                color: $heading-color
+    .content
+        h6
+            font-size: 16px
+            margin-bottom: 0
+        h5
+            margin-bottom: 0
+            + .designation
+                font-size: 16px
+        .designation
+            font-size: 14px
+    &:hover
+        .image
+            &:before
+                opacity: 0.85
+            .social-style-one
+                opacity: 1
+                bottom: 10px
+            
+/* Home Three */
+.team-content-three
+    .number
+        line-height: 1
+        font-size: 100px
+        font-weight: 600
+        color: $primary-color
+    > p
+        max-width: 280px
+        font-weight: 500
+
+.team-part-three
+    .team-member-two
+        .image
+            img
+                width: auto
+            &:before
+                display: none
+            .social-style-one
+                left: 30px
+                transform: translate(0, -10px)
+                a
+                    color: white
+                    
+/* About Page */
+.more-text-with-btn
+    padding: 15px
+    flex-wrap: wrap
+    align-items: center
+    display: inline-flex
+    justify-content: center
+    background: $lighter-color
+    p
+        margin: 0
+        font-weight: 500
+        color: $heading-color
+        +res-ab(xs)
+            padding: 0 25px
+    .theme-btn
+        font-size: 14px
+        padding: 7px 30px
+        +gapTB(margin, 5px)

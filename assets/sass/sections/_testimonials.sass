@@ -1,0 +1,310 @@
+/*******************************************************/
+/*************** ## Testimonials Area *****************/
+/*******************************************************/
+.testimonials-left
+    max-width: 525px
+    position: relative
+    img
+        width: 100%
+    .slick-dots
+        +poRB(0)
+        background: white
+        padding: 35px 40px
+        
+    &.style-two
+        .slick-dots
+            background: $primary-color
+            li
+                background: $heading-color
+                &:after
+                    border-color: $heading-color
+        
+.testimonials-active
+    height: 100%
+    display: flex
+    padding: 25px 80px
+    align-items: center
+    background-color: $primary-color
+    +res-ab(xl)
+        margin-left: -30px
+    +res-bl(xl)
+        +gapTB(padding, 80px)
+    +res-bl(lg)
+        padding: 50px
+    +res-bl(sm)
+        +gapLR(padding, 25px)
+    
+    &.style-two
+        background: white
+        .testimonial-item
+            .ratting i
+                color: $primary-color
+            .testi-footer:before
+                background: $primary-color
+
+.testimonial-item
+    .testi-header
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 5px
+        h6
+            margin-right: 15px
+            margin-bottom: 15px
+            +res-ab(xs)
+                font-size: 20px
+        .ratting
+            margin-bottom: 15px
+            i
+                color: $heading-color
+    .testi-text
+        font-size: 27px
+        font-weight: 500
+        line-height: 1.67
+        color: $heading-color
+        font-family: $heading-font
+        +res-bl(md)
+            font-size: 19px
+        +res-bl(sm)
+            font-size: 16px
+    .testi-footer
+        display: flex
+        flex-wrap: wrap
+        margin-top: 40px
+        align-items: center
+        color: $heading-color
+        b
+            font-size: 20px
+            font-weight: 600
+        &:before
+            content: ''
+            +size(40px, 2px)
+            margin-right: 20px
+            background: $heading-color
+        
+    &.style-two
+        margin-bottom: 30px
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07)
+        .testi-header
+            margin-bottom: 0
+            background: white
+            position: relative
+            .author
+                width: 35%
+                max-width: 170px
+                margin-right: 33px
+                +res-bl(xs)
+                    margin-right: 15px
+            h6
+                margin-top: 5px
+                transition: 0.5s
+                margin-bottom: 2px
+                +res-bl(xs)
+                    margin-bottom: 0
+            .ratting
+                margin-bottom: 0
+                margin-left: -3px
+                i
+                    transition: 0.5s
+                    color: $primary-color
+        .testi-text
+            font-size: 18px
+            font-weight: 400
+            background: white
+            padding: 33px 48px 25px
+            +res-bl(xs)
+                font-size: 16px
+                +gapLR(padding, 30px)
+            span
+                margin: 0 5px
+                line-height: 0
+                font-size: 27px
+                font-weight: 500
+                display: inline-block
+                &:last-child
+                    transform: translateY(20px)
+        .testi-footer
+            margin-top: 0
+            background: white
+            position: relative
+            padding: 0 48px 35px
+            align-items: flex-start
+            +res-bl(xs)
+                +gapLR(padding, 30px)
+            h6
+                margin-bottom: 0
+            &:before
+                +gapTB(margin, 10px)
+                background: $primary-color
+        &.hover-style
+            box-shadow: none
+            .testi-header
+                margin: 0 15px
+                transition: 0.5s
+                padding: 20px 40px
+                background: $lighter-color
+                +res-bl(xs)
+                    +gapLR(padding, 30px)
+                .author
+                    max-width: 70px
+                    margin-right: 20px
+            .testi-text
+                color: $base-color
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07)
+                span
+                    color: $primary-color
+            .testi-footer
+                box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07)
+                &:after
+                    content: ''
+                    transition: 0.5s
+                    +poLT(15px, 100%)
+                    background: #e8e8e8
+                    +size(calc(100% - 30px), 10px)
+            &:hover
+                .testi-header,
+                .testi-footer:after
+                    background: $primary-color
+                .testi-header
+                    h6, i
+                        color: white
+                
+/* Testimonials Three */
+.testimonials-three-active
+    +gapLR(margin, -15px)
+    .testimonial-item
+        +gapLR(margin, 15px)
+    .slick-dots
+        margin-top: 45px
+        
+/* Testimonials Four */
+.testimonials-four-active
+    margin-left: -15px
+    margin-right: -220px
+    +res-bl(lb)
+        margin-right: -15px
+    .testimonial-item
+        +gapLR(margin, 15px)
+        
+.testimonials-four-content
+    > p
+        font-size: 18px
+        
+.testimonials-four-dots
+    display: flex
+    justify-content: flex-end
+    .slick-dots
+        padding: 25px
+        background: $primary-color
+        li
+            background: white
+            &:after
+                border-color: white
+            
+/* Testimonials Five */
+.testimonials-five-active
+    +res-ab(lg)
+        padding-top: 100px
+    .slick-list
+        margin: auto
+        max-width: 925px
+        text-align: center
+    .testi-header
+        justify-content: center
+        .ratting i
+            color: $primary-color
+    .testi-footer
+        justify-content: center
+        &:before
+            background: $primary-color
+    .slick-arrow
+        z-index: 2
+        position: absolute
+        top: calc(50% - 35px)
+        +res-bl(lb)
+            display: none !important
+        &.prev-arrow
+            left: -70px
+        &.next-arrow
+            right: -70px
+    .slick-dots
+        margin-top: 130px
+        +res-bl(lg)
+            margin-top: 70px
+    &:after
+        z-index: -1
+        +absmiddle()
+        line-height: 1
+        content: "\f10d"
+        font-size: 500px
+        color: rgba(0, 0, 0, 0.03)
+        font-family: "Font Awesome 5 Pro"
+        +res-bl(lg)
+            font-size: 400px
+        +res-bl(md)
+            font-size: 300px
+        +res-bl(ms)
+            font-size: 200px
+        
+/* Testimonials Two */
+.testimonials-two-left
+    padding: 50px 70px
+    background-position: center
+    background-repeat: no-repeat
+    +res-bl(sm)
+        +gapLR(padding, 35px)
+    .sub-title
+        color: $heading-color
+    .slick-dots
+        margin-top: 50px
+        justify-content: flex-start
+        li
+            background: $heading-color
+            &:after
+                border-color: $heading-color
+        
+.testimonials-two-active
+    padding: 45px 66px
+    background: #1F212C
+    +res-bl(sm)
+        +gapLR(padding, 35px)
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .testi-header
+        margin-bottom: 35px
+        .author
+            max-width: 100px
+            margin-right: 50px
+            +res-bl(ms)
+                max-width: 80px
+                margin-right: 20px
+        .ratting-part
+            h6
+                color: white
+                margin-right: 0
+                margin-bottom: 7px
+                +res-bl(xs)
+                    font-size: 16px
+            .ratting
+                margin-bottom: 0
+                i
+                    color: $primary-color
+    .testi-text
+        color: white
+        font-weight: 400
+        line-height: 1.83
+        +res-ab(sm)
+            font-size: 18px
+    .testi-footer
+        margin-top: 25px
+        align-items: flex-start
+        h6
+            color: white
+            margin-bottom: 0
+            +res-ab(xs)
+                font-size: 20px
+        .designation
+            color: white
+        &:before
+            margin-top: 13px
+            background: $primary-color

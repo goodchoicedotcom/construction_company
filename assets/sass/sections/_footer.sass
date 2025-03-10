@@ -1,0 +1,162 @@
+/*******************************************************/
+/******************* ## Main Footer *******************/
+/*******************************************************/
+.main-footer
+    background-color: #2A2C38
+    &.bgc-black
+        background: $heading-color
+    
+.footer-clients
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    .clients
+        display: flex
+        margin-right: 50px
+        margin-bottom: 15px
+        align-items: center
+        +res-bl(xl)
+            margin-right: 25px
+        img
+            +size(70px)
+            border-radius: 50%
+            border: 2px solid white
+            &:not(:last-child)
+                margin-right: -10px
+    h5
+        color: white
+        font-weight: 500
+        margin-bottom: 15px
+        +res-ab(xl)
+            font-size: 24px
+        a
+            color: white
+    
+.footer-widget
+    margin-bottom: 50px
+    p
+        color: rgba(255, 255, 255, 0.65)
+                
+.footer-title
+    color: white
+    margin-bottom: 22px
+    
+.footer-text
+    p
+        margin-bottom: 20px
+    a
+        color: white
+        font-size: 20px
+        margin-bottom: 13px
+        display: inline-block
+        font-family: $heading-font
+        i
+            color: $primary-color
+            margin-right: 10px
+        
+.footer-links ul li
+    &:not(:last-child)
+        margin-bottom: 7px
+    a
+        color: rgba(255, 255, 255, 0.65) 
+        &:before
+            content: "\f101"
+            font-size: 14px
+            color: white
+            margin-right: 7px
+            font-family: "Font Awesome 5 Pro"
+        &:hover
+            color: white
+    
+.newsletter-form
+    position: relative
+    display: flex
+    input
+        border: 0
+        color: #818498
+        padding: 14px 10px 14px 30px
+        background: #1F212C
+        &::placeholder
+            color: #818498
+            font-weight: 400
+    button
+        flex: none
+        color: $heading-color
+        line-height: 62px
+        +box($primary-color, 60px)
+        
+.newsletter-widget
+    .newsletter-form
+        margin-top: 22px
+    .newsletter-part
+        background: #1F212C
+        padding: 35px 50px 40px
+        +res-bl(ms)
+            +gapLR(padding, 25px)
+        .footer-title
+            margin-bottom: 15px
+            +res-bl(xs)
+                font-size: 20px
+                margin-bottom: 20px
+        .newsletter-form
+            margin-top: 0
+            input
+                background: #2A2C38
+    .footer-bottom-nav
+        margin-left: 0
+        li
+            margin-left: 0
+            margin-right: 33px
+    
+.gallery
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -5px
+    a
+        margin: 10px 5px 0
+        +overlay($primary-color, 0)
+        max-width: calc(33.333% - 10px)
+        &:before
+            z-index: 1
+            transition: 0.5s
+        i
+            z-index: 2
+            opacity: 0
+            +absmiddle()
+            font-size: 20px
+            transition: 0.5s
+        &:hover
+            &:before
+                opacity: 0.85
+            i
+                opacity: 1
+
+/* Footer Bottom */  
+.footer-bottom
+    position: relative
+    background: #1F212C
+    .copyright-text
+        color: rgba(255, 255, 255, 0.65)
+        a
+            color: $primary-color
+    .scroll-top
+        color: $heading-color
+        position: absolute
+        top: -20px
+        left: calc(50% - 20px)
+        text-align: center
+        
+.footer-bottom-nav
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -25px)
+    li
+        margin: 0 25px 5px
+        a
+            color: rgba(255, 255, 255, 0.65)
+            i
+                color: white
+                margin-right: 10px
+                transition: .5s
+            &:hover i
+                color: $primary-color

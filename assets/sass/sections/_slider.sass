@@ -1,0 +1,176 @@
+/*******************************************************/
+/******************* ## Slider Area ********************/
+/*******************************************************/
+.slider-item
+    +gapTB(padding, 145px)
+    +overlay($heading-color, 0.65)
+    background-size: cover
+    background-position: center
+    &:before
+        mix-blend-mode: multiply
+    +res-bl(lg)
+        +gapTB(padding, 100px)
+    &:after
+        +poLT(0)
+        content: ''
+        z-index: -1
+        +size(45%, 100%)
+        background: rgba(0, 0, 0, 0.5)
+        clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 0% 0%)
+        +res-bl(xl)
+            width: 75%
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%)
+    .bg-lines.for-black-bg
+        span
+            background: rgba(255, 255, 255, 0.1)
+        
+.slide-content
+    color: white
+    max-width: 640px
+    position: relative
+    z-index: 2
+    > *
+        opacity: 0
+        transition: 1s
+        transform: translateY(20px)
+    .sub-title
+        @extend %h6
+        line-height: 1
+        padding: 13px 20px
+        background: white
+        margin-bottom: 22px
+        display: inline-block
+        text-transform: capitalize
+        +res-bl(sm)
+            font-size: 16px
+        +res-bl(sm)
+            font-size: 14px
+    h1
+        color: white
+        font-size: 75px
+        line-height: 1.2
+        margin-bottom: 32px
+        +res-bl(lg)
+            font-size: 65px
+        +res-bl(md)
+            font-size: 55px
+        +res-bl(sm)
+            font-size: 45px
+        +res-bl(ms)
+            font-size: 38px
+            line-height: 1.4
+        +res-bl(xs)
+            font-size: 32px
+    p
+        font-size: 22px
+        line-height: 1.8
+        +res-bl(lg)
+            font-size: 20px
+        +res-bl(sm)
+            font-size: 18px
+        +res-bl(xs)
+            font-size: 16px
+    .theme-btn
+        margin-top: 15px
+        
+.slider-image
+    opacity: 0
+    transition: 1s
+    transform: translate(-20px)
+   
+.dot-wrap
+    +poRT(0, 38%)
+    width: 100%
+    
+.main-slider-dots
+    right: 15px
+    display: flex
+    position: absolute
+    justify-content: flex-end
+    .slick-dots
+        flex-direction: column
+        li
+            margin: 10px 0
+            background: white
+            &.slick-active:after
+                border-color: white
+    
+.slick-active
+    .slide-content
+        > *
+            opacity: 1
+            transform: translateY(0)
+        .sub-title
+            transition-delay: 0.2s
+        h1
+            transition-delay: 0.4s
+        p
+            transition-delay: 0.6s
+        .theme-btn
+            transition-delay: 0.8s
+        .video-play-text
+            transition-delay: 0.9s
+    .slider-image
+        opacity: 1
+        transition-delay: 0.4s
+        transform: translate(0)
+            
+/* Slider Two */
+.slider-item-two
+    .slide-content
+        color: #C9CAD0
+        margin-bottom: 35px
+        +res-bl(lg)
+            margin-bottom: 55px
+        .sub-title-two
+            font-size: 26px
+            font-weight: 500
+            margin-bottom: 15px
+            display: inline-block
+            +res-bl(sm)
+                font-size: 22px
+            +res-bl(xs)
+                font-size: 20px
+            i
+                margin-right: 10px
+                color: $primary-color
+        h1
+            +res-bt(md, xl)
+                font-size: 60px
+
+.slider-two-dots
+    .slick-dots
+        z-index: 2
+        margin-top: -15px
+        position: absolute
+        +res-bl(lg)
+            margin-top: -35px
+            padding: 15px 10px
+            background: #222222
+        li
+            background: white
+            &:after
+                border-color: white
+            
+/* Slider Three */
+.main-slider-three
+    +overlay(black, 0.3)
+    +res-ab(xxl)
+        +gapLR(margin, 30px)
+    .dot-wrap
+        top: 45%
+
+.slider-item-three
+    +gapTB(padding, 50px)
+    .slide-content
+        max-width: 765px
+        .btn-and-video
+            .video-play-text
+                > i
+                    color: $primary-color
+                span
+                    color: white
+                    font-size: 14px
+                    text-decoration: none
+                    i
+                        margin-left: 4px

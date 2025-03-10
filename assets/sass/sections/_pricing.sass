@@ -1,0 +1,58 @@
+/*******************************************************/
+/******************* ## Pricing Area ******************/
+/*******************************************************/
+.pricing-item
+    padding: 50px
+    background: white
+    margin-bottom: 30px
+    +res-bl(xl)
+        +gapLR(padding, 35px)
+    .title
+        text-align: center
+        margin-bottom: 5px
+    .text
+        text-align: center
+        margin-bottom: 33px
+    .price
+        line-height: 1
+        font-size: 45px
+        font-weight: 600
+        text-align: center
+        margin-bottom: 40px
+        color: $primary-color
+        font-family: $heading-font
+        +res-bl(xs)
+            font-size: 36px
+        .next
+            font-size: 16px
+            font-weight: 400
+            +res-bl(xs)
+                font-size: 14px
+    hr
+        margin-bottom: 40px
+    .list-style-three
+        margin-bottom: 40px
+        +res-ab(xs)
+            font-size: 20px
+        li
+            margin-bottom: 15px
+            &:before
+                font-size: 1em
+                color: $base-color
+    &.price-dark-bg
+        +overlay(#1F212C, 1)
+        &:before
+            mix-blend-mode: multiply
+        .text,
+        .title,
+        .price,
+        .list-style-three,
+        .list-style-three li:before
+            color: white
+            
+.price-popular-badge
+    padding: 7px
+    margin-bottom: 0
+    text-align: center
+    text-transform: uppercase
+    background: $primary-color
